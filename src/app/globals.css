@@ -1,0 +1,7 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+html{scroll-behavior:smooth}body{background:#F3EADF;color:#382820;font-family:var(--f-sans)}
+@keyframes spin-slow{to{transform:rotate(360deg)}}
+.spin-slow{animation:spin-slow 120s linear infinite}
+@media (prefers-reduced-motion:reduce){.spin-slow{animation:none}html{scroll-behavior:auto}}
+.btn{display:inline-block;padding:.85rem 1.8rem;letter-spacing:.14em;text-transform:uppercase;font-size:.75rem;border:1px solid #604B40;transition:all .3s}
+.btn-solid{background:#604B40;color:#FAF6EF}.btn-solid:hover{background:#382820}.btn-line:hover{background:#604B40;color:#FAF6EF}
