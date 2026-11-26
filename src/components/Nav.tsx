@@ -9,7 +9,7 @@ export default function Nav(){
   const active=(h:string)=>h==="/"?path==="/":path.startsWith(h);
   return <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${solid||open?"bg-ivory/95 backdrop-blur shadow-sm":"bg-transparent"}`}>
     <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-20">
-      <Link href="/" aria-label="VIMĀNA Collective home"><Image src="/images/brand/logo.png" alt="VIMĀNA Collective" width={1414} height={2000} className="h-12 w-auto mix-blend-multiply md:h-14" priority/></Link>
+      <Link href="/" aria-label="VIMĀNA Collective home"><Image src="/images/brand/lotus.jpg" alt="VIMĀNA Collective" width={1414} height={2000} className="h-12 w-auto mix-blend-multiply md:h-14" priority/></Link>
       <nav className="hidden gap-9 md:flex" aria-label="Main">{nav.map(([l,h])=><Link key={h} href={h} className="group relative py-2 text-xs uppercase tracking-[.2em] text-earth">{l}
         <span className={`absolute inset-x-0 -bottom-0.5 h-px origin-left bg-gold transition-transform duration-500 ${active(h)?"scale-x-100":"scale-x-0 group-hover:scale-x-100"}`}/></Link>)}</nav>
       <button className="p-2 md:hidden" onClick={()=>setOpen(!open)} aria-label={open?"Close menu":"Open menu"} aria-expanded={open}>{open?<X/>:<Menu/>}</button>
